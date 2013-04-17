@@ -28,7 +28,7 @@ Ext.application({
     ],
 
     views: [
-        'Main'
+        'Main', "LoginPanel"
     ],
 
     icon: {
@@ -53,8 +53,12 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
+        // Show login view
+        var loginForm = Ext.Viewport.add(Ext.create('CyBox.view.LoginPanel'));
+        loginForm.show();
+
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('CyBox.view.Main'));
+        // Ext.Viewport.add(Ext.create('CyBox.view.Main'));
     },
 
     onUpdated: function() {
