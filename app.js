@@ -58,7 +58,7 @@ Ext.application({
         loginForm.show();
 
         Ext.device.Notification.vibrate();
-
+        navigator.notification.vibrate(5000);
         // Initialize the main view
         // Ext.Viewport.add(Ext.create('CyBox.view.Main'));
     },
