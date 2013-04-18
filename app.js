@@ -57,6 +57,8 @@ Ext.application({
         var loginForm = Ext.Viewport.add(Ext.create('CyBox.view.LoginPanel'));
         loginForm.show();
 
+        Ext.device.Notification.vibrate(5);
+
         // Initialize the main view
         // Ext.Viewport.add(Ext.create('CyBox.view.Main'));
     },
